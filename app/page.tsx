@@ -1,7 +1,13 @@
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 
 export default function Home() {
   return (
-   <p>Hello board</p>
+    <div className="flex flex-col gap-y-4">
+      For authenticated users
+      <div>
+        <UserButton />
+      </div>
+    </div>
   );
 }
