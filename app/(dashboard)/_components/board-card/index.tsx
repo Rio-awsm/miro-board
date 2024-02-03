@@ -9,6 +9,7 @@ import { api } from "@/convex/_generated/api";
 import { Overlay } from "./overlay";
 import { formatDistanceToNow } from "date-fns";
 import Footer from "./Footer";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface BoardCardProps {
   id: string;
@@ -45,14 +46,24 @@ const BoardCard = ({
           <Image src={imageUrl} fill alt={title} className="object-fit" />
           <Overlay />
         </div>
-        <Footer isFavorite={isFavorite}
+        <Footer
+          isFavorite={isFavorite}
           title={title}
           authorLabel={authorLabel}
           createdAtLabel={createdAtLabel}
           onClick={() => {}}
-          disabled={false} />
+          disabled={false}
+        />
       </div>
     </Link>
+  );
+};
+
+BoardCard.Skeleton = function BoardCardSkeleton() {
+  return (
+    <div className=" aspect-[100/127] rounded-lg  overflow-hidden">
+      <Skeleton className="h-full w-full" />
+    </div>
   );
 };
 
