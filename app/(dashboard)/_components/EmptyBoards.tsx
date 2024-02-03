@@ -35,7 +35,7 @@ export const EmptyBoards = () => {
       </p>
       <div className="mt-6">
         <Button disabled={pending} onClick={onClick} size="lg">
-          Craete board
+          Create board
         </Button>
       </div>
     </div>
