@@ -5,7 +5,7 @@ import { EmptyBoards } from "./EmptyBoards";
 import { EmptyFavorites } from "./EmptyFavourites";
 import { EmptySearch } from "./EmptySearch";
 import { api } from "@/convex/_generated/api";
-import BoardCard from "./board-card";
+import {BoardCard} from "./board-card";
 import { NewBoardButton } from "./new-board-button";
 
 interface BoardListProps {
@@ -65,7 +65,7 @@ const BoardList = ({ orgId, query }: BoardListProps) => {
             authorName={board.authorName}
             createdAt={board._creationTime}
             orgId={board.orgId}
-            isFavorite={false}
+            isFavorite={board.isFavorite}
           />
         ))}
       </div>
