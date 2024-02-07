@@ -4,7 +4,11 @@ import Info from "./Info"
 import Toolbar from "./Toolbar"
 import Participants from "./participants"
 
-const Canvas = () => {
+interface CanvasProps {
+  boardId: string;
+};
+
+const Canvas = ({boardId} : CanvasProps) => {
   return (
     <main className="h-full w-full relative bg-neutral-100 touch-none">
       <Info />
